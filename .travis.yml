@@ -22,7 +22,7 @@ env:
 after_success:
   - util/generate-latest-docs.sh
   - util/publish-snapshot-on-commit.sh
-
+  - bash <(curl -s https://copilot.blackducksoftware.com/ci/travis/scripts/upload)
 branches:
   except:
     - gh-pages
